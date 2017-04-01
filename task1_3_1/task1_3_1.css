@@ -1,0 +1,63 @@
+body{
+    margin:0;
+    padding:0;
+    background: #fff;
+}
+.content {
+    background-color: #eee;
+    margin: 20px;
+    border: 1px solid #999;
+    position: relative;
+    height:auto;
+    overflow: hidden;
+}
+article{
+    background-color: #fff;
+    border: 1px solid #999;
+    margin: 20px;
+}
+.left-side{
+    width: 200px;
+    float: left;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+}
+.left-side span{
+    display: inline-block;
+    position: absolute;
+    left: 120px;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+}
+.main {
+    padding: 20px;
+    position: absolute;//相对于content窗口进行定位
+    top:0;
+    left: 220px;
+    right: 140px;
+    /*自动换行*/
+    word-wrap:break-word;
+    word-break: normal;
+    /*高度自适应*/
+    height:auto;
+    overflow: hidden;
+}
+.right-side{
+    width: 120px;
+    float: right;
+}
+
+article img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #999;
+    margin:0 0 20px 20px;
+}
+article img:first-child{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #999;
+    margin: 20px;
+}
