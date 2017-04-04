@@ -2,31 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d643927-2f8a-41f4-ad47-72d148a2ed9b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/.idea/task1_7_1.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/2-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/2-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/2-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/2-4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/books.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/login.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/map.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/part3books.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/part5-1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/part5-2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/part5-3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/part5-4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/part6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/part6.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/icon/part7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/task1_7_1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../task1_7_1 - 副本/task1_7_1.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/icon/books.png" afterPath="$PROJECT_DIR$/icon/books.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/icon/login.png" afterPath="$PROJECT_DIR$/icon/login.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/icon/part6.psd" afterPath="$PROJECT_DIR$/icon/part6.psd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task1_7_1.css" afterPath="$PROJECT_DIR$/task1_7_1.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task1_7_1.html" afterPath="$PROJECT_DIR$/task1_7_1.html" />
@@ -50,8 +25,8 @@
       <file leaf-file-name="task1_7_1.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task1_7_1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            <state relative-caret-position="378">
+              <caret line="101" column="54" lean-forward="false" selection-start-line="101" selection-start-column="54" selection-end-line="101" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -60,8 +35,8 @@
       <file leaf-file-name="task1_7_1.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task1_7_1.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            <state relative-caret-position="484">
+              <caret line="265" column="20" lean-forward="true" selection-start-line="265" selection-start-column="20" selection-end-line="265" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -95,8 +70,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="805" />
-    <option name="y" value="6" />
+    <option name="x" value="767" />
+    <option name="y" value="5" />
     <option name="width" value="945" />
     <option name="height" value="1018" />
   </component>
@@ -256,14 +231,15 @@
       <workItem from="1491043825127" duration="8875000" />
       <workItem from="1491123130232" duration="9129000" />
       <workItem from="1491196127616" duration="4947000" />
+      <workItem from="1491308198926" duration="2651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47419000" />
+    <option name="totallyTimeSpent" value="50070000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="805" y="6" width="945" height="1018" extended-state="0" />
+    <frame x="767" y="5" width="945" height="1018" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30010834" sideWeight="0.49591598" order="0" side_tool="false" content_ui="combo" />
@@ -295,6 +271,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/task1_7_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/task1_7_1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -443,16 +427,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task1_7_1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="484">
+          <caret line="265" column="20" lean-forward="true" selection-start-line="265" selection-start-column="20" selection-end-line="265" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task1_7_1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        <state relative-caret-position="378">
+          <caret line="101" column="54" lean-forward="false" selection-start-line="101" selection-start-column="54" selection-end-line="101" selection-end-column="54" />
           <folding />
         </state>
       </provider>
