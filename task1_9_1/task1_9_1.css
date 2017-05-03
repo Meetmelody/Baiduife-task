@@ -1,0 +1,10 @@
+header{
+    background: #2189be;
+    width:100%;
+    height: 84px;
+}
+header #square{
+    background: #fff;
+    width: 55px;
+    height: 55px;
+}
