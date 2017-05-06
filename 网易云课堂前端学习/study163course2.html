@@ -1,0 +1,184 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript 02</title>
+    <style>
+        #demo{
+            border:#111 4px solid;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+        }
+        #all{
+            margin: 20px;
+        }
+        span{
+            font-weight: 700;
+        }
+        #set{
+            background: red;
+            color: #fff;
+            width: 80px;
+            height: 30px;
+            border-style: none;
+        }
+        #red{
+            color: #fff;
+            background: #8dad0b;
+            border-style: none;
+            width: 40px;
+            height: 30px;
+            padding-top: 8px;
+            text-align: center;
+        }
+        #yellow{
+            color:#fff;
+            background: #f7c011;
+            border-style: none;
+            width: 40px;
+            height: 30px;
+            padding-top: 8px;
+            text-align: center;
+        }
+        #blue{
+            color:#fff;
+            background: #568ffa;
+            border-style: none;
+            width: 40px;
+            height: 30px;
+            padding-top: 8px;
+            text-align: center;
+        }
+        .numb{
+            color:#555;
+            background: #e1e1e1;
+            border: #555 solid 1px;
+            width: 38px;
+            height: 30px;
+            padding-top: 8px;
+            text-align: center;
+        }
+        #recover,#confirm{
+            border-style: none;
+            background: #002658;
+            color: #fff;
+            width: 80px;
+            height: 30px;
+            margin-left: 25px;
+        }
+        #outside{
+            width: 300px;
+            height: 200px;
+            border: 30px solid #8e8e8e;
+            padding-left: 45px;
+            padding-top: 20px;
+            display: none;
+            position: fixed;
+            left: 35%;
+            top: 27%;
+            z-index: 1002;
+        }
+        #mask
+        {
+            width:100%;
+            height:100%;
+            background:#555;
+            opacity: 0.5;
+            position:absolute;
+            left:0;
+            top:0;
+            display:none;
+            z-index:1001;
+        }
+    </style>
+</head>
+<body>
+<div id="all">
+    <span>请为下面的DIV设置样式：</span>
+    <input type="button" value="点击设置" id="set">
+    <div id="demo"></div>
+</div>
+<div id=mask></div>
+<div id="outside">
+    <table>
+        <tr>
+        <th><span>请选择背景色：</span></th>
+        <th><div id="red">红</div></th>
+        <th><div id="yellow">黄</div></th>
+        <th><div id="blue">蓝</div></th>
+        </tr>
+        <tr>
+            <td><span>请选择宽(px):</span></td>
+            <td><div id="w200" class="numb">200</div></td>
+            <td><div id="w300" class="numb">300</div></td>
+            <td><div id="w400" class="numb">400</div></td>
+        </tr>
+        <tr>
+            <td><span>请选择高(px):</span></td>
+            <td><div id="h200" class="numb">200</div></td>
+            <td><div id="h300" class="numb">300</div></td>
+            <td><div id="h400" class="numb">400</div></td>
+        </tr>
+    </table>
+    <br>
+    <input type="button" value="恢复" id="recover">
+    <input type="button" value="确定" id="confirm">
+</div>
+
+<script type="text/javascript">
+    //显示outside部分
+    document.getElementById("set").onclick = show;
+    document.getElementById("confirm").onclick = hide;
+    function show(){
+        document.getElementById("outside").style.display = "block";
+        document.getElementById("mask").style.display = "block"
+    }
+    function hide(){
+        document.getElementById("outside").style.display = "none";
+        document.getElementById("mask").style.display = "none"
+    }
+
+    //显示颜色部分
+    document.getElementById("red").onclick = turnred;
+    document.getElementById("yellow").onclick = turnyellow;
+    document.getElementById("blue").onclick = turnblue;
+    function  turnred() {
+        document.getElementById("demo").style.background = "red"
+    }function  turnyellow() {
+        document.getElementById("demo").style.background = "yellow"
+    }function  turnblue() {
+        document.getElementById("demo").style.background = "blue"
+    }
+    //改变宽度
+    document.getElementById("w200").onclick = turnw200;
+    document.getElementById("w300").onclick = turnw300;
+    document.getElementById("w400").onclick = turnw400;
+    function turnw200(){
+        document.getElementById("demo").style.width = "200px"
+    }function turnw300(){
+        document.getElementById("demo").style.width = "300px"
+    }function turnw400(){
+        document.getElementById("demo").style.width = "400px"
+    }
+    //改变高度
+    document.getElementById("h200").onclick = turnh200;
+    document.getElementById("h300").onclick = turnh300;
+    document.getElementById("h400").onclick = turnh400;
+    function turnh200() {
+        document.getElementById("demo").style.height = "200px"
+    }function turnh300() {
+        document.getElementById("demo").style.height = "300px"
+    }function turnh400() {
+        document.getElementById("demo").style.height = "400px"
+    }
+    //恢复
+    document.getElementById("recover").onclick = reset;
+    function reset() {
+        document.getElementById("demo").style.width = "100px";
+        document.getElementById("demo").style.height = "100px";
+        document.getElementById("demo").style.backgroundColor = "white";
+    }
+</script>
+</body>
+</html>
