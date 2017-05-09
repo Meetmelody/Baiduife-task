@@ -1,0 +1,105 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>iPhoneChat</title>
+    <style>
+#img1{
+
+    margin-top: 75px;
+    margin-left: 23px;
+}
+img{
+    width: 23px;
+}
+#interface{
+    background: url("pic/5.jpg");
+    margin: 0 auto;
+    width: 258px;
+    height: 509px;
+        }
+.div1{
+    width: 222px;
+    height: 338px;
+    /* margin-left: 157px; */
+    top: 63px;
+    position: relative;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    /* overflow-y: visible; */
+    font-size: 14px;
+    line-height: 30px;
+    overflow: scroll;
+}
+#text1 {
+    width: 140px;
+}
+.fl{
+    float:left;
+    vertical-align:text-bottom;
+
+}
+.fr{
+    float:right;
+    vertical-align:text-bottom;
+}
+span{
+    background: #9eea6a;
+    word-break:break-all;
+    overflow:auto;
+}
+    </style>
+    <script type="text/javascript">
+        window.onload= function() {
+            var oDiv = document.getElementById("div1");
+            var oImg = document.getElementById("img1");
+            var oText = document.getElementById("text1");
+            var oBtn = document.getElementById("btn");
+
+            var onOff = true;
+            oImg.onclick = function () {
+                if (onOff) {
+                    oImg.src = ('pic/laugh.png');
+                    onOff = false;
+                }
+                else {
+                    oImg.src = ('pic/smile.png');
+                    onOff = true;
+                }
+            };
+            oBtn.onclick = function sbFrm() {
+                if (oText.value === "") {
+                    alert("请先输入信息！");
+                }
+                else if (onOff) {
+                    oDiv.innerHTML = oDiv.innerHTML + "<div class='fl'>" + "<img class='fl' src='pic/smile.png'/>" + "<span>"
+                        + oText.value + "</span></div>" + "<br />" ;
+                    oText.value = '';
+                } else {
+                    oDiv.innerHTML = oDiv.innerHTML+'<div class="fr"><span>' + oText.value + '</span>' +
+                        '<img class="fr" src="pic/laugh.png" /></div>' + '<br />'  ;
+                    oText.value = '';
+                }
+            };
+            function keySend(event) {
+                if (event.keyCode == 13) {
+                    sbFrm();
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="interface">
+
+    <div id="div1" class="div1"></div>
+
+    <img id="img1" src="pic/smile.png">
+    <input type="text" id="text1">
+    <input type="button" id="btn" value="发送"/>
+
+</div>
+
+
+</body>
+</html>
