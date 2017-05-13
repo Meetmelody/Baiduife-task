@@ -67,25 +67,26 @@ span{
                     onOff = true;
                 }
             };
-            oBtn.onclick = function sbFrm() {
+            oBtn.onclick = function test() {
                 if (oText.value === "") {
                     alert("请先输入信息！");
                 }
                 else if (onOff) {
                     oDiv.innerHTML = oDiv.innerHTML + "<div class='fl'>" + "<img class='fl' src='pic/smile.png'/>" + "<span>"
-                        + oText.value + "</span></div>" + "<br />" ;
+                        + oText.value + "</span></div>" + "<br />";
                     oText.value = '';
                 } else {
-                    oDiv.innerHTML = oDiv.innerHTML+'<div class="fr"><span>' + oText.value + '</span>' +
-                        '<img class="fr" src="pic/laugh.png" /></div>' + '<br />'  ;
+                    oDiv.innerHTML = oDiv.innerHTML + '<div class="fr"><span>' + oText.value + '</span>' +
+                        '<img class="fr" src="pic/laugh.png" /></div>' + '<br />';
                     oText.value = '';
                 }
             };
-            function keySend(event) {
-                if (event.keyCode == 13) {
-                    sbFrm();
+            function checkkey(keys) {
+                if (keys.ctrlKey && keys.keyCode === 13) {
+                    test();
+                    }
                 }
-            }
+
         }
     </script>
 </head>
@@ -94,10 +95,13 @@ span{
 
     <div id="div1" class="div1"></div>
 
-    <img id="img1" src="pic/smile.png">
-    <input type="text" id="text1">
-    <input type="button" id="btn" value="发送"/>
 
+
+    <form onkeydown="if(event.ctrlKey && event.keyCode===13)this.submit()">
+        <img id="img1" src="pic/smile.png">
+        <input type="text" id="text1" >
+    <input type="button" id="btn"  value="发送"/>
+    </form>
 </div>
 
 

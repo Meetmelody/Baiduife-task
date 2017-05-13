@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8">
+<title>test</title>
+<style>
+
+div{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #555;
+
+}
+
+</style>
+
+<script type="text/javascript">
+    window.onload = function(){
+        var oBtn = document.getElementById("btn1");
+        var oUl = document.getElementById("list");
+        var arr = ['收紧网上新闻编采和管理严打网络谣言',
+        '新闻妹说新闻5月10日：警方布下天罗地网就为抓你！',
+        '川普捍卫解职FBI局长科米的决定',
+        '新闻狗毕业就失业？或许这记安利能为你指点一二',
+        '5月8日新闻抢先看：裕廊西车祸揭案中案！'];
+
+        oBtn.onclick = function () {
+            oBtn.disabled = true;
+            for(var i= 0 ; i <arr.length;i++){
+                oUl.innerHTML +="<li>"+arr[i]+"</li>"
+            }
+        };
+    }
+</script>
+</head>
+<body>
+
+<div id="div1">123</div>
+<input id="btn1" type = "button" value="自动生成五条新闻"/>
+<ul id="list"></ul>
+</body>
+</html>
