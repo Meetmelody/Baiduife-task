@@ -68,41 +68,21 @@ window.onload= function () {
     var arrUrl = ["pic/cat1.jpg","pic/cat2.jpg","pic/cat3.jpg","pic/cat4.jpg"]
     var arrText = ["图片1","图片2","图片3","图片4"];
     var num = 0;
-    var oldLi = null;
     var oUl = oDiv.getElementsByTagName("ul")[0];
     var aLi = oUl.getElementsByTagName("li");
     for(var i=0 ;i<arrUrl.length;i++){
         oUl.innerHTML +="<li></li>"
     }
-    oldLi = aLi[num];
-
-
-    //初始化
+function fnTab(){
     oImg.src = arrUrl[num];
     oSpan.innerHTML = 1+num+"/"+arrUrl.length;
     oP.innerHTML = arrText[num];
-    aLi[num].className="active";
+    for( var i = 0;i<aLi.length;i++){aLi[i].className=""; }
+    aLi[num].className="active";}
+    fnTab();
     for (var i=0;i<aLi.length;i++) {
         aLi[i].index = i;//索引值
-        aLi[i].onclick = function () {
-            oImg.src=arrUrl[this.index];
-            oP.innerHTML = arrText[this.index];
-            oSpan.innerHTML = 1+this.index+"/"+arrText.length;
-            //active变换 全部清空 当前添加
-            /*for( var i = 0;i<aLi.length;i++){
-                aLi[i].className="";
-            }
-            this.className = "active";*/
-            //active变换清空上个 当前添加
-            oldLi.className = "";
-            oldLi = this;
-            this.className = "active";
-        };
-
-    }
-
-};
-
+        aLi[i].onclick = function () {num = this.index;fnTab();};}};
 </script>
 </head>
 <body>
