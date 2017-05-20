@@ -4,82 +4,81 @@
     <meta charset="utf-8">
     <title>JavaScript 02</title>
     <style>
-    #content{
-        width: 400px;
-        height: 400px;
-        border: 10px solid #ccc;
-        margin: 40px auto 0;
-        position: relative;
-        background: #f1f1f1;
-    }
-    #content a{
-        width: 40px;
-        height: 40px;
-        background: #000;
-        border: 5px solid #fff;
-        position:absolute;
-        top: 75px;
-        text-align: center;
-        text-decoration: none;
-        line-height: 40px;
-        color: #fff;
-        font-weight:bold;
-        opacity: 0.6;
-
-    }
-    #content a:hover{
-        opacity: 0.9;
-    }
-    #prev{
-        left: 10px;
-    }
-    #next{
-        right: 10px;
-    }
-    #text{
-        position: absolute;
-        bottom:0;
-        left:0;
-        width: 400px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        color: #fff;
-        background: #000;
-        opacity: 0.6;
-        margin:0;
-    }
-    #span1{
-        position: absolute;
-        top:0;
-        left:0;
-        width: 400px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        color: #fff;
-        background: #000;
-        opacity: 0.6;
-    }
-    #img1{
+        #content{
+            width: 400px;
+            height: 400px;
+            border: 10px solid #ccc;
+            margin: 40px auto 0;
+            position: relative;
+            background: #f1f1f1;
+        }
+        #content a{
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border: 5px solid #fff;
+            position:absolute;
+            top: 75px;
+            text-align: center;
+            text-decoration: none;
+            line-height: 40px;
+            color: #fff;
+            font-weight:bold;
+            opacity: 0.6;
+        }
+        #content a:hover{
+            opacity: 0.9;
+        }
+        #prev{
+            left: 10px;
+        }
+        #next{
+            right: 10px;
+        }
+        #text{
+            position: absolute;
+            bottom:0;
+            left:0;
+            width: 400px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background: #000;
+            opacity: 0.6;
+            margin:0;
+        }
+        #span1{
+            position: absolute;
+            top:0;
+            left:0;
+            width: 400px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background: #000;
+            opacity: 0.6;
+        }
+        #img1{
             width: 400px;
             height: 400px;
         }
-    #add{
-        width: 400px;
-        margin: 0 auto;
-        padding-top: 20px;
-        padding-left: 20px;
-    }
+        #add{
+            width: 400px;
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
     </style>
 
 
 </head>
 <body>
 <div id="add"><input type="button" id="circulation" value="循环切换">
-<input type="button" id="order" value="顺序切换">
-<p id="des">图片可从最后一张跳转到第一张循环切换
-    图片只能到最后一张或智能到第一张切换</p></div>
+    <input type="button" id="order" value="顺序切换">
+    <p id="des">图片可从最后一张跳转到第一张循环切换
+        图片只能到最后一张或智能到第一张切换</p></div>
 
 <div id="content">
 
@@ -102,7 +101,6 @@
         var num = 0;
         var circleCut = document.getElementById("circulation");
         var orderCut = document.getElementById("order");
-
         function fnTab() {
             oSpan.innerHTML = num+1 + "/"+ arrText.length;
             oImg.src = arrUrl[num];
@@ -124,28 +122,25 @@
                 }
                 fnTab();
             };
-        orderCut.onclick =function () {
-            oPrev.onclick = function () {
-                num--;
-                if( num == -1 ){
-                    alert("这已经是第一张图片啦！");
-                    num=0;
+            orderCut.onclick =function () {
+                oPrev.onclick = function () {
+                    num--;
+                    if( num == -1 ){
+                        alert("这已经是第一张图片啦！");
+                        num=0;
+                    }
+                    fnTab();
+                };
+                oNext.onclick = function () {
+                    num++;
+                    if( num == arrText.length ){
+                        alert("这已经是最后一张图片啦！");
+                        num = num-1;
+                    }
+                    fnTab();
                 }
-                fnTab();
-            };
-            oNext.onclick = function () {
-                num++;
-                if( num == arrText.length ){
-                    alert("这已经是最后一张图片啦！");
-                    num = num-1;
-                }
-                fnTab();
-        }
-        }
-
-    };}
-
-
+            }
+        };}
 </script>
 </body>
 </html>

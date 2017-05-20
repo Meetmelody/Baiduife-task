@@ -1,0 +1,131 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PICTURE CHANGING</title>
+    <link href="http://libs.baidu.com/fontawesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+    body{
+        margin:0 auto;
+        width: 800px;
+        background: #efe6bd;
+    }
+    p{
+        text-align: center;
+    }
+    img{
+        clear: both;
+        display: block;
+        margin:auto;
+        width: 400px;
+        height: 400px;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        top: 20px;
+        margin-top: -30px;
+        margin-left: 320px;
+        color: #c9abab;
+    }
+#left{
+    position: absolute;
+    margin: 180px 0 0 150px;
+}
+#right{
+    position: absolute;
+    margin: 180px 0 0 630px;
+        }
+#pic .active{
+        color: #faff12;
+    }
+.thumbnail{
+    width: 40px;
+    height: 40px;
+    background: #ddd7e8;
+    box-shadow: 2px 2px 1px #888;
+    border-radius: 4px;
+    margin-left: -14px;
+    margin-top: 8px;
+    display: none;
+}
+.nail{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #ddd7e8 transparent;
+    margin-top: -47px;
+    margin-left: -3px;
+    position: relative;
+    display: none;
+ }
+    </style>
+
+   <script type="text/javascript">
+        window.onload = function () {
+            var oLeft = document.getElementById("left");
+            var oRight = document.getElementById("right");
+            var oDiv = document.getElementById("pic");
+            var oImg = document.getElementsByTagName("img")[0];
+            var oUl = oDiv.getElementsByTagName("ul")[0];
+            var aLi = oUl.getElementsByTagName("li");
+            var oPic = document.getElementsByClassName("thumbnail")[0];
+            var arrUrl = ['pic/cat1.jpg', 'pic/cat2.jpg', 'pic/cat3.jpg', 'pic/cat4.jpg', 'pic/cat5.jpg'];
+            var num = 0;
+            function fnTab(){
+                oImg.src = arrUrl[num];
+                for( var i = 0;i<aLi.length;i++){aLi[i].className=""; }
+                aLi[num].className="active";}
+            fnTab();
+            for (var i=0;i<aLi.length;i++) {
+                aLi[i].index = i;//索引值
+                aLi[i].onclick = function () {
+                    num = this.index;
+                    fnTab();
+                };
+                    aLi[i].onmouseover = function () {
+                        this.getElementsByClassName("thumbnail")[0].style.display = "block";
+                       // oPic.innerHTML = [oImg.src,arrUrl[num]];
+                        this.getElementsByClassName("nail")[0].style.display = "block";
+                    };
+                    aLi[i].onmouseout = function () {
+                        this.getElementsByClassName("thumbnail")[0].style.display = "none";
+                        this.getElementsByClassName("nail")[0].style.display = "none";
+                }
+            }
+            oLeft.onclick = function () {
+                num--;
+                if( num === -1 ){
+                    num = arrUrl.length-1;
+                }
+                fnTab();
+            };
+            oRight.onclick = function () {
+                num++;
+                if( num === arrUrl.length ){
+                    num = 0;
+                }
+                fnTab();
+            };
+        }
+    </script>
+
+</head>
+<body>
+<p>带缩略图的图片轮换</p>
+<div id="pic">
+    <i class="fa fa-angle-left fa-4x" aria-hidden="true" id="left"></i>
+    <i class="fa fa-angle-right fa-4x" aria-hidden="true" id="right"></i>
+    <img src="">
+    <ul>
+        <li><i class="fa fa-circle"  aria-hidden="true"></i><div class=" thumbnail"><img src="pic/cat1.jpg" style='height:30px;width:30px;padding:5px;'> </div><div class="nail"></div></li>
+        <li><i class="fa fa-circle"  aria-hidden="true"></i><div class=" thumbnail"><img src="pic/cat2.jpg" style='height:30px;width:30px;padding:5px;'> </div><div class="nail"></div></li>
+        <li><i class="fa fa-circle"  aria-hidden="true"></i><div class=" thumbnail"><img src="pic/cat3.jpg" style='height:30px;width:30px;padding:5px;'> </div><div class="nail"></div></li>
+        <li><i class="fa fa-circle"  aria-hidden="true"></i><div class=" thumbnail"><img src="pic/cat4.jpg" style='height:30px;width:30px;padding:5px;'> </div><div class="nail"></div></li>
+        <li><i class="fa fa-circle"  aria-hidden="true"></i><div class=" thumbnail"><img src="pic/cat5.jpg" style='height:30px;width:30px;padding:5px;'> </div><div class="nail"></div></li>
+    </ul>
+
+</div>
+</body>
+</html>
