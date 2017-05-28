@@ -110,6 +110,9 @@ nav img{
     flex-basis:25%;
     text-align: center;
 }
+.activity{
+    width: 200px;
+}
 #part2 img{
     margin: 46px auto;
 }
