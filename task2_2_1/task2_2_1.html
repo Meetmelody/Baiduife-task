@@ -40,7 +40,8 @@
             {
                 if (aqiData[j][1]>60){
                     var c = document.createElement("li");
-                    var d = document.createTextNode("第"+number[i]+"名："+aqiData[j][0]+"，"+aqiData[j][1]);
+                    var d = document.createTextNode("第"+number[i]+"名："+
+                        aqiData[j][0]+"，"+aqiData[j][1]);
                     c.appendChild(d);
                     var e = document.getElementById("aqi-list");
                     e.appendChild(c);
