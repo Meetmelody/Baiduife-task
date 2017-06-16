@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+    <script type="text/javascript">
+        window.onload=function () {
+            var alnp = document.getElementsByTagName("input");
+            var str="";
+            alnp[1].onclick = function () {
+                str=alnp[0].value;
+                if (isNaN(str)){
+                    alert(str+"不是数字");
+                }else{
+                    alert(str+"是数字")
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+<input type="text"/>
+<input type="button" value="判断输入值是不是数字">
+
+</body>
+</html>

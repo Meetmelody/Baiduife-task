@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数传参实例</title>
+<script>
+    window.onload = function () {
+        var oUl=document.getElementById('ul');
+        var liList=oUl.getElementsByTagName('li');
+
+        var sum=0;
+        for(var i=0;i<liList.length;i++){
+            sum=sum+ fn3(liList[i]);
+        }
+
+        alert(sum);
+
+//        function fn1(oLi) {
+//            var oBtn1 = oLi.getElementsByClassName('btn1');
+//            var oBtn2 = oLi.getElementsByClassName('btn2');
+//            var oStrong = oLi.getElementsByTagName('strong')[0];
+//            var oEm = oLi.getElementsByTagName('em')[0];
+//            var oSpan = oLi.getElementsByTagName('span')[0];
+//            var n1 = Number(oStrong.innerHTML);
+//            var n2 = parseFloat(oEm.innerHTML);
+//            var n3 = parseFloat(oSpan.innerHTML);
+//
+//            oBtn2[0].onclick = function () {
+//                n1++;
+//                oStrong.innerHTML = n1;
+//                oSpan.innerHTML = n1*n2 +"元";
+//
+//            };
+//            oBtn1[0].onclick = function () {
+//                if (n1 < 1) {
+//                    n1=0;
+//                } else {
+//                    n1--;
+//                    oStrong.innerHTML = n1;
+//                    oSpan.innerHTML = n1*n2 +"元";
+//                }
+//            };
+//
+//        }
+//
+//        var num1 = document.getElementById('num1');
+//        var num2 = document.getElementById('num2');
+//        var num3 = document.getElementById('num3');
+//        for (var j=0;j<aLi.length;j++){
+//            fn2();
+//        }
+//        function fn2() {
+//            alert(num1);
+//        }
+
+        function fn3(element) {
+            var num=element.childNodes.item(1).innerHTML;
+            alert(num);
+            return num;
+        }
+        }
+
+</script>
+</head>
+
+<body>
+<ul id="ul">
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>12.5元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>1.5元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>42.5元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>22.5元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>9元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+</ul>
+
+<ul id="ul2">
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>12.5元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>1.5元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>42.5元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>22.5元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>9元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+</ul>
+
+<ul id="ul1">
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>12.5元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>1.5元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>42.5元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>22.5元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" class="btn1">
+        <strong> 0 </strong>
+        <input type="button" value="+" class="btn2">
+        单价：<em>9元</em>&nbsp&nbsp
+        小计：<span>0元</span>
+    </li>
+</ul>
+
+<p>商品合计共：<b id="num1">0</b>件，共花费：
+    <b id="num2">0</b>元<br>
+其中最贵的商品单价是：<b id="num3">0</b>元</p>
+</body>
+</html>
