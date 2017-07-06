@@ -1,0 +1,9 @@
+nav{
+    width:100%;
+    height: 90px;
+    background:rgb(40,45,51);}
+#house{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    }
