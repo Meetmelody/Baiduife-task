@@ -7,6 +7,13 @@ function showPic(whichPic){
     placeholder.setAttribute("src",source);
     var text = whichPic.getAttribute("title");
     var description = document.getElementById("description");
-    description.firstChild.nodeValue = text;
-    alert(description.firstChild.nodeValue)
 }
+/**
+function countBodyChildren() {
+    var body_element = document.getElementsByTagName("body")[0];
+    alert(body_element.nodeType);
+}
+countBodyChildren();**/
+
+
+alert(description.childNodes[0].nodeValue);
