@@ -8,5 +8,4 @@ function showPic(whichPic){
     var text = whichPic.getAttribute("title");
     var description = document.getElementById("description");
     description.firstChild.nodeValue = text;
-    alert(description.firstChild.nodeValue)
 }
