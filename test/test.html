@@ -7,15 +7,13 @@
 </head>
 <body>
     <h1>Snapshots</h1>
-    <ul>
-        <li><a href="Image/1.jpg" onclick="showPic(this);return false;" title="Car logo">Car logo</a></li>
-        <li><a href="Image/2.jpg" onclick="showPic(this);return false;" title="Inside">Inside</a></li>
-        <li><a href="Image/3.jpg" onclick="showPic(this);return false;" title="Out of car">Out of car</a></li>
-        <li><a href="Image/4.jpg" onclick="showPic(this);return false;" title="Google">Google</a></li>
-        <li><a href="http://www.example.com/" onclick="showPic(this); return false">Example</a></li>
+    <ul id="imagegallery">
+        <li><a href="Image/1.jpg"  title="Car logo"><img src="Image/thumbnail_1.jpg" alt="1" /></a> </li>
+        <li><a href="Image/2.jpg"  title="Inside"><img src="Image/thumbnail_2.jpg" alt="2" /> </a></li>
+        <li><a href="Image/3.jpg"  title="Out of car"><img src="Image/thumbnail_3.jpg" alt="3" /> </a></li>
+        <li><a href="Image/4.jpg"  title="Google"><img src="Image/thumbnail_4.jpg" alt="4" /></a> </li>
     </ul>
-    <img id="placeholder" src="Image/placeholder.jpg" alt="my image gallery" />
-    <p id="description">Choose an image.</p>
+    <script src="Script/util.js"></script>
     <script src="Script/showPic.js"></script>
 </body>
 </html>

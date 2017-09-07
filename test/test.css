@@ -13,12 +13,8 @@ h1{
 ul{
     padding:0;
 }
-li{
+li {
     float: left;
     padding: 1em;
     list-style: none;
-}
-img{
-    display: block;
-    clear: both;
 }
