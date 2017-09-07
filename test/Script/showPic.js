@@ -1,24 +1,60 @@
 /**
  * Created by Melody on 2017/4/12.
  */
-function showPic(whichPic){
+function preparePlaceholder(){
+    if (!document.createElement) return false;
+    if (!document.createTextNode) return false;
+    if (!document.getElementById) return false;
+    if (!document.getElementById("imagegallery")) return false;
+    var placeholder = document.createElement("img");
+    placeholder.setAttribute("id","placeholder");
+    placeholder.setAttribute("src","image/placeholder.jpg");
+    placeholder.setAttribute("alt","my image gallery");
+    var description = document.createElement("p");
+    description.setAttribute("id","description");
+    var desctext = document.createTextNode("Choose an imgage");
+    description.appendChild(desctext);
+    var gallery = document.getElementById("imagegallery");
+    insertAfter(placeholder,gallery);
+    insertAfter(description,placeholder);
+}
+
+function prepareGallery(){
+    if(!document.getElementsByTagName) return false;
+    if(!document.getElementById) return false;
+    if(!document.getElementById("imagegallery")) return false;
+    var gallery = document.getElementById("imagegallery");
+    var links = gallery.getElementsByTagName("a");
+    for (var i=0;i<links.length;i++){
+        links[i].onclick  = function(){
+            return showPic(this);
+        };
+        links[i].onkeypress = links[i].onclick;
+    }
+}
+function showPic(whichPic) {
+    if (!document.getElementById("placeholder")) return false;
     var source = whichPic.getAttribute("href");
     var placeholder = document.getElementById("placeholder");
-    placeholder.setAttribute("src",source);
-    var text = whichPic.getAttribute("title");
+    placeholder.setAttribute("src", source);
+    if (!document.getElementById("description")) return false;
+    if (whichPic.getAttribute("title")){
+        var text = whichPic.getAttribute("title");
+    }else {
+    var text = "";
+    }
     var description = document.getElementById("description");
-<<<<<<< HEAD
-    description.firstChild.nodeValue = text;
+    if (description.firstChild.nodeType ==3) {
+        description.firstChild.nodeValue = text;
+    } return false;
 }
-=======
-}
-/**
-function countBodyChildren() {
-    var body_element = document.getElementsByTagName("body")[0];
-    alert(body_element.nodeType);
-}
-countBodyChildren();**/
+addLoadEvent(preparePlaceholder);
+addLoadEvent(prepareGallery);
 
 
-alert(description.childNodes[0].nodeValue);
->>>>>>> d0a48d333056977e93ad0d2145150227cd1c6dc8
+document.getElementsByTagName("body")[0].appendChild(placeholder);
+document.getElementsByTagName("body")[0].appendChild(description);
+document.body.appendChild(placeholder);
+document.body.appendChild(description);
+
+insertAfter();
