@@ -2,7 +2,6 @@
  * Created by Melody on 2017/9/14.
  */
 function displayAccessKeys(){
-    alert("1");
     if (!document.getElementsByTagName|| !document.createElement|| !document.createTextNode) return false;
     //取得文档中的所有链接
     var links = document.getElementsByTagName("a");
