@@ -7,3 +7,6 @@ abbr{
     border:0;
     font-style: normal;
 }
+#navigation{
+    display: none;
+}
