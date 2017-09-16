@@ -31,3 +31,7 @@ tr:nth-child(odd){
 tr:nth-child(even){
     background-color: #fff;
 }
+.intro{
+    font-weight: bold;
+    font-size: 1.4em;
+}
