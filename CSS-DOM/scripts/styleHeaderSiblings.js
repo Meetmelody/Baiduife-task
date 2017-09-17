@@ -1,13 +1,13 @@
 /**
  * Created by Melody on 2017/9/15.
  */
-function styleHeaderSiblings() {
+function styleHeaderSiblings(tag,theclass) {
     if(!document.getElementsByTagName) return false;
-    var headers = document.getElementsByTagName("h1");
+    var headers = document.getElementsByTagName("tag");
     var elem;
     for (var i=0;i<headers.length;i++){
         elem = getNextElement(headers[i].nextSibling);
-        elem.className = "intro";
+        addClass(elem,theclass)
     }
 }
 function getNextElement(node) {
@@ -19,4 +19,6 @@ function getNextElement(node) {
     }
     return null;
 }
-window.onload = styleHeaderSiblings;
+addLoadEvent(function () {
+    styleHeaderSiblings("h1","intro");
+});
