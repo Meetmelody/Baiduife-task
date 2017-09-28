@@ -12,5 +12,3 @@ function addLoadEvent(func) {
         }
     }
 }
-addLoadEvent(positionMessage);
-addLoadEvent(moveMessage);

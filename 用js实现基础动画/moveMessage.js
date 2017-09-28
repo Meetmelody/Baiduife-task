@@ -1,7 +1,7 @@
 /**
  * Created by Melody on 2017/9/19.
  */
-function moveMessage() {
+/* function moveMessage() {
     if (!document.getElementById) return false;
     if (!document.getElementById("message")) return false;
     var elem = document.getElementById("message");
@@ -25,4 +25,4 @@ function moveMessage() {
     elem.style.left = xpos +"px";
     elem.style.top = ypos +"px";
     movement = setTimeout("moveMessage()",10);
-}
+} */
